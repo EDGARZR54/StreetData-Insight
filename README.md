@@ -25,6 +25,7 @@ Libraries:
 [![OSMnx](https://badgen.net/badge/OSMnx/0.8.2/2E71FF)](https://osmnx.readthedocs.io/en/stable/)
 [![Shapely](https://badgen.net/badge/Shapely/1.6.4/00B0FF)](https://shapely.readthedocs.io/en/stable/manual.html)
 [![Pillow](https://badgen.net/badge/Pillow/6.2.1/FF4081)](https://pillow.readthedocs.io/en/stable/)
+[![ImageIO 2.6.1](https://badgen.net/badge/ImageIO/2.6.1/blue)](https://imageio.readthedocs.io/en/stable/)
 [![OpenCV](https://badgen.net/badge/OpenCV/4.2.0.32/FF6E00)](https://opencv.org/)
 [![Piexif](https://badgen.net/badge/Piexif/1.1.3/FFC300)](https://piexif.readthedocs.io/en/latest/)
 [![fractions](https://badgen.net/badge/fractions/2.2.0/AA00FF)](https://docs.python.org/3/library/fractions.html)
@@ -92,6 +93,8 @@ OSMnx: Boeing, G. 2017. OSMnx: New Methods for Acquiring, Constructing, Analyzin
 Shapely: Gillies, S., & others. (2007). Shapely: manipulation and analysis of geometric objects. Retrieved from "https://github.com/Toblerity/Shapely"
 
 Pillow: Clark, A. (2015). Pillow (PIL Fork) Documentation. readthedocs. Retrieved from https://buildmedia.readthedocs.org/media/pdf/pillow/latest/pillow.pdf
+
+ImageIO: Almar Klein, Sebastian Wallkötter, Steven Silvester, Anthony Tanbakuchi, actions-user, Paul Müller, Juan Nunez-Iglesias, Mark Harfouche, Dennis, Antony Lee, Matt McCormick, lschr, OrganicIrradiation, Arash Rai, Ariel Ladegaard, Tim D. Smith, Hugo van Kemenade, Ghislain Vaillant, jackwalker64, … Graham Inggs. (2023). imageio/imageio: v2.31.1 (v2.31.1). Zenodo. https://doi.org/10.5281/zenodo.8025955
 
 OpenCV: Bradski, G. (2000). The OpenCV Library. Dr. Dobb&#x27;s Journal of Software Tools.
 
