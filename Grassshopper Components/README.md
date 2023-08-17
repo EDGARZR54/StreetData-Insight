@@ -1,3 +1,5 @@
+# Documentation
+
 ## Subcategories
 
 - [GeoData](#geodata)
