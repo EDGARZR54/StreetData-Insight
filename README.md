@@ -34,6 +34,7 @@ Libraries:
 
 ************
 # Installation
+![Ribbon](https://github.com/EDGARZR54/StreetData-Insight/assets/114836515/3d5029e4-2adf-4498-98fd-f51976ea0476)
 Requires a Python 2.7 installation, Compatible with Windows and Rhino 7.
 
 1. Activate Conda Environment:
