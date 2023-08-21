@@ -1,5 +1,5 @@
 # Documentation
-
+![Animation_0](https://github.com/EDGARZR54/StreetData-Insight/assets/114836515/e1bf6e60-1fdd-4504-972d-809f339c4380)
 ## Subcategories
 
 - [GeoData](#geodata)
