@@ -5,24 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Before/After Slider</title>
+
+  <!-- Incluir el CDN para la librería -->
+  <script src="https://cdn.jsdelivr.net/npm/before-after-slider@1.0.0/dist/slider.bundle.js"></script>
+
   <style>
     html, body {
       margin: 0;
       padding: 0;
     }
-    h1 {
-      text-align: center;
-    }
   </style>
-  <script src="../dist/slider.bundle.js"></script>
 </head>
 <body>
   <h1 style="text-align: center;">
-    <img src="https://github.com/EDGARZR54/StreetData-Insight/assets/114836515/de67caa2-a486-4f98-bd1e-d09db6b35e37" alt="Before/After Slider" style="max-width: 100%; height: auto;">
+    <img src="https://github.com/EDGARZR54/StreetData-Insight/assets/114836515/de67caa2-a486-4f98-bd1e-d09db6b35e37" alt="Title Image" style="max-width: 100%; height: auto;">
   </h1>
   <p style="text-align: center;">Slider1: [ width: 90%, height: 400px, line: false ]</p>
   <div id="slider1"></div>
-  <p style="text-align: center;">Slider2: [ width: 90%, height: 400px ]</p>
+  <p style="text-align: center;">Slider2: [ width: 70% ]</p>
   <div id="slider2"></div>
 
   <script>
@@ -39,9 +39,8 @@
         el: "#slider2",
         beforeImg: 'https://cdn.jsdelivr.net/gh/VincentTV/VincentTV-Code@master/Before%26After-Slider/before.jpg',
         afterImg: 'https://cdn.jsdelivr.net/gh/VincentTV/VincentTV-Code@master/Before%26After-Slider/after.jpg',
-        width: "90%",
-        height: "400px",
-      })
+        width: "70%",
+      });
     }
   </script>
 </body>
