@@ -32,6 +32,7 @@
       background-color: white; /* Fondo blanco para el navbar */
       display: flex;
       align-items: center;
+      justify-content: space-between;
       padding: 10px 20px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       z-index: 1000;
@@ -39,8 +40,22 @@
 
     /* Logo en el navbar */
     .navbar img {
-      height: 40px;
+      height: 100px; /* Ajustar el tamaño de la imagen 2.5 veces más grande */
       margin-right: 15px;
+    }
+
+    /* Contenedor de botones en la navbar */
+    .navbar-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    /* Estilo de los botones */
+    .navbar-links a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      font-size: 16px;
     }
 
     /* Título e imágenes */
@@ -66,7 +81,17 @@
   <!-- Navbar sticky -->
   <div class="navbar">
     <img src="https://raw.githubusercontent.com/EDGARZR54/StreetData-Insight/78caacf58ce7573c3270af65f5519565090a37fe/Imagotype/SDI_Imagotype.svg" alt="SDI Logo">
-    <h2 style="margin: 0; color: black;">StreetData-Insight</h2>
+    <!-- Pestañas/botones -->
+    <div class="navbar-links">
+      <a href="#metodologia">Metodología</a>
+      <a href="#paper">Paper</a>
+      <a href="#resultados">Resultados</a>
+      <a href="#segmentacion">Segmentación</a>
+      <a href="#comparativa">Comparativa</a>
+      <a href="#repositorio">Repositorio</a>
+      <a href="#documentacion">Documentación</a>
+      <a href="#food4rhino">Food4Rhino</a>
+    </div>
   </div>
 
   <!-- Título -->
