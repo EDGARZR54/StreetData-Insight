@@ -8,35 +8,85 @@
   
   <!-- Incluir Open Sans desde Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
-  <!-- Incluir el CDN para la librería -->
+
+  <!-- Incluir el CDN para la librería Before/After Slider -->
   <script src="https://cdn.jsdelivr.net/npm/before-after-slider@1.0.0/dist/slider.bundle.js"></script>
+
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="https://github.com/EDGARZR54/StreetData-Insight/raw/d378384937443e8cd09db8f0956e21d9ce58907d/Grassshopper%20Components/icon/SDI.png">
 
   <style>
+    /* Estilo general */
     html, body {
       margin: 0;
       padding: 0;
+      background-color: black; /* Fondo negro */
+      color: white; /* Texto blanco */
+      font-family: 'Open Sans', sans-serif;
     }
 
+    /* Navbar sticky */
+    .navbar {
+      position: sticky;
+      top: 0;
+      background-color: white; /* Fondo blanco para el navbar */
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+
+    /* Logo en el navbar */
+    .navbar img {
+      height: 40px;
+      margin-right: 15px;
+    }
+
+    /* Título e imágenes */
+    h1 {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    /* Texto central */
     .open-sans-bold {
-      font-family: 'Open Sans', sans-serif;
       font-weight: 700;
       text-align: center;
+      margin: 20px 0;
+    }
+
+    /* Centrar sliders */
+    #slider1, #slider2 {
+      margin: 0 auto;
     }
   </style>
 </head>
 <body>
-  <h1 style="text-align: center;">
-    <img src="https://github.com/EDGARZR54/StreetData-Insight/assets/114836515/de67caa2-a486-4f98-bd1e-d09db6b35e37" alt="Title Image" style="max-width: 100%; height: auto;">
+  <!-- Navbar sticky -->
+  <div class="navbar">
+    <img src="https://github.com/EDGARZR54/StreetData-Insight/blob/78caacf58ce7573c3270af65f5519565090a37fe/Imagotype/SDI_Imagotype.svg" alt="SDI Logo">
+    <h2 style="margin: 0; color: black;">StreetData-Insight</h2>
+  </div>
+
+  <!-- Título -->
+  <h1>
+    <img src="https://github.com/EDGARZR54/StreetData-Insight/assets/114836515/de67caa2-a486-4f98-bd1e-d09db6b35e37" 
+      alt="Title Image" 
+      style="max-width: 100%; height: auto;">
   </h1>
+
+  <!-- Texto y sliders -->
   <p class="open-sans-bold">Segmentación por deep learning RTFP</p>
   <div id="slider1"></div>
+
   <p class="open-sans-bold">Comparativa referencial</p>
   <div id="slider2"></div>
 
+  <!-- Configuración de los sliders -->
   <script>
     window.onload = function() {
+      // Slider 1
       new SliderBar({
         el: "#slider1",
         beforeImg: 'https://cdn.jsdelivr.net/gh/VincentTV/VincentTV-Code@master/Before%26After-Slider/before.jpg',
@@ -45,13 +95,15 @@
         height: "400px",
         line: false
       });
+
+      // Slider 2
       new SliderBar({
         el: "#slider2",
         beforeImg: 'https://cdn.jsdelivr.net/gh/VincentTV/VincentTV-Code@master/Before%26After-Slider/before.jpg',
         afterImg: 'https://cdn.jsdelivr.net/gh/VincentTV/VincentTV-Code@master/Before%26After-Slider/after.jpg',
         width: "70%",
       });
-    }
+    };
   </script>
 </body>
 </html>
