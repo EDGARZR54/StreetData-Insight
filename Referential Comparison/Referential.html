@@ -25,40 +25,6 @@
       font-family: 'Open Sans', sans-serif;
     }
 
-    /* Navbar sticky */
-    .navbar {
-      position: sticky;
-      top: 0;
-      background-color: white; /* Fondo blanco para el navbar */
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 10px 20px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      z-index: 1000;
-    }
-
-    /* Logo en el navbar */
-    .navbar img {
-      height: 80px; /* Reducir el tamaño para móviles */
-      margin-right: 15px;
-    }
-
-    /* Contenedor de botones en la navbar */
-    .navbar-links {
-      display: flex;
-      gap: 10px; /* Reducir el espacio entre botones */
-      flex-wrap: wrap; /* Permitir que los botones se envuelvan en móviles */
-    }
-
-    /* Estilo de los botones */
-    .navbar-links a {
-      text-decoration: none;
-      color: black;
-      font-weight: bold;
-      font-size: 14px; /* Reducir el tamaño de la fuente */
-    }
-
     /* Título e imágenes */
     h1 {
       text-align: center;
@@ -104,24 +70,6 @@
 
     /* Media queries para móviles */
     @media (max-width: 768px) {
-      .navbar {
-        flex-direction: column; /* Cambiar a columna en móviles */
-        align-items: flex-start;
-        padding: 10px;
-      }
-
-      .navbar img {
-        height: 60px; /* Reducir aún más el tamaño del logo */
-      }
-
-      .navbar-links {
-        gap: 8px; /* Reducir el espacio entre botones */
-      }
-
-      .navbar-links a {
-        font-size: 12px; /* Reducir el tamaño de la fuente */
-      }
-
       .open-sans-bold {
         font-size: 1rem; /* Reducir el tamaño de la fuente */
       }
@@ -138,33 +86,18 @@
   </style>
 </head>
 <body>
-  <!-- Navbar sticky -->
-  <div class="navbar">
-    <img src="https://raw.githubusercontent.com/EDGARZR54/StreetData-Insight/78caacf58ce7573c3270af65f5519565090a37fe/Imagotype/SDI_Imagotype.svg" alt="SDI Logo">
-    <!-- Pestañas/botones -->
-    <div class="navbar-links">
-      <a href="#metodologia">Metodología</a>
-      <a href="#herramientas">Herramientas</a>
-      <a href="#paper">Paper</a>
-      <a href="#resultados">Resultados</a>
-      <a href="#segmentacion">Segmentación</a>
-      <a href="./Referential Comparison/Referential.html">Comparativa</a>      
-      <a href="https://github.com/EDGARZR54/StreetData-Insight" target="_blank">Repositorio</a>
-      <a href="#documentacion">Documentación</a>
-      <a href="https://www.food4rhino.com/en/app/street-data-insight?lang=es" target="_blank">Food4Rhino</a>
+  <!-- Navbar externo -->
+  <div id="navbar-placeholder"></div>
+
+  <!-- Título -->
+  <h1 style="margin: 0; padding: 0;">
+    <div style="display: flex; justify-content: center; align-items: center; height: 40vh; overflow: hidden; position: relative;">
+      <video autoplay loop muted style="height: 100%; position: absolute; top: 0; left: 50%; transform: translateX(-50%) scale(1.0);">
+        <source src="https://cdn.jsdelivr.net/gh/EDGARZR54/StreetData-Insight@e1d05bcde26d03736d50a8f57149e7c42372581e/Imagotype/Negative.mp4" type="video/mp4">
+        Tu navegador no soporta la reproducción de videos.
+      </video>
     </div>
-  </div>
-
-<!-- Título -->
-<h1 style="margin: 0; padding: 0;">
-  <div style="display: flex; justify-content: center; align-items: center; height: 40vh; overflow: hidden; position: relative;">
-    <video autoplay loop muted style="height: 100%; position: absolute; top: 0; left: 50%; transform: translateX(-50%) scale(1.0);">
-      <source src="https://cdn.jsdelivr.net/gh/EDGARZR54/StreetData-Insight@e1d05bcde26d03736d50a8f57149e7c42372581e/Imagotype/Negative.mp4" type="video/mp4">
-      Tu navegador no soporta la reproducción de videos.
-    </video>
-  </div>
-</h1>
-
+  </h1>
 
   <!-- Texto y sliders -->
   <p class="open-sans-bold">Segmentación por deep learning RTFP</p>
@@ -194,6 +127,14 @@
         width: "70%",
       });
     };
+
+    // Cargar el navbar externo
+    fetch('./partials/navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
+      })
+      .catch(error => console.error('Error cargando el navbar:', error));
   </script>
 
   <!-- Créditos y logos al final de la página -->
