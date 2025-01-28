@@ -124,17 +124,17 @@
         el: "#slider2",
         beforeImg: 'https://cdn.jsdelivr.net/gh/VincentTV/VincentTV-Code@master/Before%26After-Slider/before.jpg',
         afterImg: 'https://cdn.jsdelivr.net/gh/VincentTV/VincentTV-Code@master/Before%26After-Slider/after.jpg',
-        width: "70%",
+        width: "100%",
       });
     };
-
-    // Cargar el navbar externo
+  
     fetch('./partials/navbar.html')
       .then(response => response.text())
       .then(data => {
         document.getElementById('navbar-placeholder').innerHTML = data;
       })
-      .catch(error => console.error('Error cargando el navbar:', error));
+      .catch(error => console.error('Error al cargar el navbar:', error));
+      // Cargar el navbar externo
   </script>
 
   <!-- Créditos y logos al final de la página -->
