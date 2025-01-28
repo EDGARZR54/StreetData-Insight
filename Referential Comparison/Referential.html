@@ -142,7 +142,7 @@
 
   <!-- Cargar el navbar externo -->
   <script>
-    fetch('./partials/navbar.html')
+    fetch('/StreetData-Insight/partials/navbar.html')
       .then(response => response.text())
       .then(data => {
         document.getElementById('navbar-placeholder').innerHTML = data;
