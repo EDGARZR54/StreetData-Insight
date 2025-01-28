@@ -13,16 +13,6 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="https://github.com/EDGARZR54/StreetData-Insight/raw/d378384937443e8cd09db8f0956e21d9ce58907d/Grassshopper%20Components/icon/SDI.png">
 
-  <!-- Cargar el navbar externo -->
-  <script>
-    fetch('./partials/navbar.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('navbar-placeholder').innerHTML = data;
-      })
-      .catch(error => console.error('Error al cargar el navbar:', error));
-  </script>
-  
   <style>
     /* Estilo general */
     html, body {
@@ -41,7 +31,7 @@
 
     /* Navbar sticky */
     .navbar {
-      position: sticky;
+      position: fixed;
       top: 0;
       background-color: white; /* Fondo blanco para el navbar */
       display: flex;
@@ -191,7 +181,17 @@
       });
     };
   </script>
-
+  
+  <!-- Cargar el navbar externo -->
+  <script>
+    fetch('./partials/navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
+      })
+      .catch(error => console.error('Error al cargar el navbar:', error));
+  </script>
+  
   <!-- Créditos y logos al final de la página -->
   <div class="credits">
     <img src="https://raw.githubusercontent.com/EDGARZR54/StreetData-Insight/refs/heads/Street-Data-Insight/Imagotype/UNAM_FA_LATE.svg" alt="UNAM Logo">
