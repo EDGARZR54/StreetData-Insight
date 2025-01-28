@@ -24,11 +24,23 @@
       color: white; /* Texto blanco */
       font-family: 'Open Sans', sans-serif;
     }
+        /* Ajustar el contenedor principal para dar espacio al navbar */
+    #main-content {
+      margin-top: 100px; /* Ajuste según el tamaño de tu navbar */
+    }
+        
+    /* Contenedor del navbar */
+    #navbar-placeholder {
+      height: auto; /* Asegura que el contenedor tenga altura */
+      position: relative; /* Asegura que el navbar esté dentro del flujo */
+    }
 
-    /* Navbar sticky */
+    /* Navbar */
     .navbar {
-      position: sticky;
-      top: 0;
+      position: fixed;      
+      top: 0;       
+      left: 0;
+      width: 100%; /* Asegura que el navbar ocupe el ancho completo */
       background-color: white; /* Fondo blanco para el navbar */
       display: flex;
       align-items: center;
@@ -57,6 +69,11 @@
       color: black;
       font-weight: bold;
       font-size: 14px; /* Reducir el tamaño de la fuente */
+    }
+
+    /* Añadir un margen derecho solo al último enlace en la navbar */
+    .navbar-links a:last-child {
+      margin-right: 50px; /* Ajusta el valor según sea necesario */
     }
 
     /* Título e imágenes */
