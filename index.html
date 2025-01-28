@@ -138,22 +138,8 @@
   </style>
 </head>
 <body>
-  <!-- Navbar sticky -->
-  <div class="navbar">
-    <img src="https://raw.githubusercontent.com/EDGARZR54/StreetData-Insight/78caacf58ce7573c3270af65f5519565090a37fe/Imagotype/SDI_Imagotype.svg" alt="SDI Logo">
-    <!-- Pestañas/botones -->
-    <div class="navbar-links">
-      <a href="#metodologia">Metodología</a>
-      <a href="#herramientas">Herramientas</a>
-      <a href="#paper">Paper</a>
-      <a href="#resultados">Resultados</a>
-      <a href="#segmentacion">Segmentación</a>
-      <a href="./Referential Comparison/Referential.html">Comparativa</a>      
-      <a href="https://github.com/EDGARZR54/StreetData-Insight" target="_blank">Repositorio</a>
-      <a href="#documentacion">Documentación</a>
-      <a href="https://www.food4rhino.com/en/app/street-data-insight?lang=es" target="_blank">Food4Rhino</a>
-    </div>
-  </div>
+  <!-- Incluir el navbar desde un archivo externo -->
+  <div id="navbar-placeholder"></div>
 
   <!-- Título -->
   <h1>
@@ -202,5 +188,14 @@
       Año de publicación: 2025.
     </p>
   </div>
+
+  <!-- Cargar el navbar externo -->
+  <script>
+    fetch('StreetData-Insight/partials/navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
+      });
+  </script>
 </body>
 </html>
