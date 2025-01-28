@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>StreetData-Insight</title>
+  
+  <!-- Incluir Open Sans desde Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <!-- Incluir el CDN para la librería Before/After Slider -->
+  <script src="https://cdn.jsdelivr.net/npm/before-after-slider@1.0.0/dist/slider.bundle.js"></script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://github.com/EDGARZR54/StreetData-Insight/raw/d378384937443e8cd09db8f0956e21d9ce58907d/Grassshopper%20Components/icon/SDI.png">
+
+  <style>
+    /* Estilo general */
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: black; /* Fondo negro */
+      color: white; /* Texto blanco */
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    /* Navbar sticky */
+    .navbar {
+      position: sticky;
+      top: 0;
+      background-color: white; /* Fondo blanco para el navbar */
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+
+    /* Logo en el navbar */
+    .navbar img {
+      height: 80px; /* Reducir el tamaño para móviles */
+      margin-right: 15px;
+    }
+
+    /* Contenedor de botones en la navbar */
+    .navbar-links {
+      display: flex;
+      gap: 10px; /* Reducir el espacio entre botones */
+      flex-wrap: wrap; /* Permitir que los botones se envuelvan en móviles */
+    }
+
+    /* Estilo de los botones */
+    .navbar-links a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      font-size: 14px; /* Reducir el tamaño de la fuente */
+    }
+
+    /* Título e imágenes */
+    h1 {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    /* Texto central */
+    .open-sans-bold {
+      font-weight: 700;
+      text-align: center;
+      margin: 20px 0;
+      font-size: 1.2rem; /* Usar unidades relativas */
+    }
+
+    /* Centrar sliders */
+    #slider1, #slider2 {
+      margin: 0 auto;
+      width: 90%; /* Ajustar el ancho para móviles */
+      max-width: 800px; /* Limitar el ancho máximo */
+    }
+
+    /* Espacio para créditos y logos */
+    .credits {
+      text-align: center;
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #333;
+      color: white;
+    }
+
+    .credits img {
+      height: 40px; /* Reducir el tamaño de los logos */
+      margin: 10px 0;
+    }
+
+    .credits p {
+      font-size: 14px;
+      margin-top: 10px;
+      text-align: justify;
+      line-height: 1.6;
+      font-weight: 300; /* Cambiar a light/regular */
+    }
+
+    /* Media queries para móviles */
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column; /* Cambiar a columna en móviles */
+        align-items: flex-start;
+        padding: 10px;
+      }
+
+      .navbar img {
+        height: 60px; /* Reducir aún más el tamaño del logo */
+      }
+
+      .navbar-links {
+        gap: 8px; /* Reducir el espacio entre botones */
+      }
+
+      .navbar-links a {
+        font-size: 12px; /* Reducir el tamaño de la fuente */
+      }
+
+      .open-sans-bold {
+        font-size: 1rem; /* Reducir el tamaño de la fuente */
+      }
+
+      #slider1, #slider2 {
+        width: 95%; /* Ajustar el ancho para móviles */
+        height: auto; /* Altura automática */
+      }
+
+      .credits p {
+        font-size: 12px; /* Reducir el tamaño de la fuente */
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar sticky -->
+  <div class="navbar">
+    <img src="https://raw.githubusercontent.com/EDGARZR54/StreetData-Insight/78caacf58ce7573c3270af65f5519565090a37fe/Imagotype/SDI_Imagotype.svg" alt="SDI Logo">
+    <!-- Pestañas/botones -->
+    <div class="navbar-links">
+      <a href="#metodologia">Metodología</a>
+      <a href="#paper">Paper</a>
+      <a href="#resultados">Resultados</a>
+      <a href="#segmentacion">Segmentación</a>
+      <a href="./Referential Comparison/Referential.html">Comparativa</a>      
+      <a href="https://github.com/EDGARZR54/StreetData-Insight" target="_blank">Repositorio</a>
+      <a href="#documentacion">Documentación</a>
+      <a href="https://www.food4rhino.com/en/app/street-data-insight?lang=es" target="_blank">Food4Rhino</a>
+    </div>
+  </div>
+
+  <!-- Título -->
+  <h1>
+    <img src="https://github.com/EDGARZR54/StreetData-Insight/assets/114836515/de67caa2-a486-4f98-bd1e-d09db6b35e37" 
+      alt="Title Image" 
+      style="max-width: 100%; height: auto;">
+  </h1>
+
+  <!-- Texto y sliders -->
+  <p class="open-sans-bold">Segmentación por deep learning RTFP</p>
+  <div id="slider1"></div>
+
+  <p class="open-sans-bold">Comparativa referencial</p>
+  <div id="slider2"></div>
+
+  <!-- Configuración de los sliders -->
+  <script>
+    window.onload = function() {
+      // Slider 1
+      new SliderBar({
+        el: "#slider1",
+        beforeImg: 'https://cdn.jsdelivr.net/gh/VincentTV/VincentTV-Code@master/Before%26After-Slider/before.jpg',
+        afterImg: 'https://cdn.jsdelivr.net/gh/VincentTV/VincentTV-Code@master/Before%26After-Slider/after.jpg',
+        width: "90%",
+        height: "400px",
+        line: false
+      });
+
+      // Slider 2
+      new SliderBar({
+        el: "#slider2",
+        beforeImg: 'https://cdn.jsdelivr.net/gh/VincentTV/VincentTV-Code@master/Before%26After-Slider/before.jpg',
+        afterImg: 'https://cdn.jsdelivr.net/gh/VincentTV/VincentTV-Code@master/Before%26After-Slider/after.jpg',
+        width: "70%",
+      });
+    };
+  </script>
+
+  <!-- Créditos y logos al final de la página -->
+  <div class="credits">
+    <img src="https://raw.githubusercontent.com/EDGARZR54/StreetData-Insight/refs/heads/Street-Data-Insight/Imagotype/UNAM_FA_LATE.svg" alt="UNAM Logo">
+    <p>
+      Este proyecto es de carácter académico y se ha utilizado material visual proveniente de Google Street View. 
+      Las imágenes empleadas son propiedad de Google y se incluyen exclusivamente con fines educativos e investigativos. 
+      Todos los derechos de las imágenes corresponden a Google. 
+      Año de publicación: 2025.
+    </p>
+  </div>
+</body>
+</html>
