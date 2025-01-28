@@ -7,7 +7,7 @@
   <title>StreetData-Insight</title>
   
   <!-- Incluir Open Sans desde Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
 
   <!-- Incluir el CDN para la librería Before/After Slider -->
   <script src="https://cdn.jsdelivr.net/npm/before-after-slider@1.0.0/dist/slider.bundle.js"></script>
@@ -40,14 +40,15 @@
 
     /* Logo en el navbar */
     .navbar img {
-      height: 100px; /* Ajustar el tamaño de la imagen 2.5 veces más grande */
+      height: 80px; /* Reducir el tamaño para móviles */
       margin-right: 15px;
     }
 
     /* Contenedor de botones en la navbar */
     .navbar-links {
       display: flex;
-      gap: 20px;
+      gap: 10px; /* Reducir el espacio entre botones */
+      flex-wrap: wrap; /* Permitir que los botones se envuelvan en móviles */
     }
 
     /* Estilo de los botones */
@@ -55,7 +56,7 @@
       text-decoration: none;
       color: black;
       font-weight: bold;
-      font-size: 16px;
+      font-size: 14px; /* Reducir el tamaño de la fuente */
     }
 
     /* Título e imágenes */
@@ -69,11 +70,14 @@
       font-weight: 700;
       text-align: center;
       margin: 20px 0;
+      font-size: 1.2rem; /* Usar unidades relativas */
     }
 
     /* Centrar sliders */
     #slider1, #slider2 {
       margin: 0 auto;
+      width: 90%; /* Ajustar el ancho para móviles */
+      max-width: 800px; /* Limitar el ancho máximo */
     }
 
     /* Espacio para créditos y logos */
@@ -86,7 +90,7 @@
     }
 
     .credits img {
-      height: 50px; /* Ajusta el tamaño de los logos */
+      height: 40px; /* Reducir el tamaño de los logos */
       margin: 10px 0;
     }
 
@@ -95,6 +99,41 @@
       margin-top: 10px;
       text-align: justify;
       line-height: 1.6;
+      font-weight: 300; /* Cambiar a light/regular */
+    }
+
+    /* Media queries para móviles */
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column; /* Cambiar a columna en móviles */
+        align-items: flex-start;
+        padding: 10px;
+      }
+
+      .navbar img {
+        height: 60px; /* Reducir aún más el tamaño del logo */
+      }
+
+      .navbar-links {
+        gap: 8px; /* Reducir el espacio entre botones */
+      }
+
+      .navbar-links a {
+        font-size: 12px; /* Reducir el tamaño de la fuente */
+      }
+
+      .open-sans-bold {
+        font-size: 1rem; /* Reducir el tamaño de la fuente */
+      }
+
+      #slider1, #slider2 {
+        width: 95%; /* Ajustar el ancho para móviles */
+        height: auto; /* Altura automática */
+      }
+
+      .credits p {
+        font-size: 12px; /* Reducir el tamaño de la fuente */
+      }
     }
   </style>
 </head>
@@ -108,7 +147,7 @@
       <a href="#paper">Paper</a>
       <a href="#resultados">Resultados</a>
       <a href="#segmentacion">Segmentación</a>
-      <a href="#comparativa">Comparativa</a>
+      <a href="./Referential Comparison/Referential.html">Comparativa</a>      
       <a href="https://github.com/EDGARZR54/StreetData-Insight" target="_blank">Repositorio</a>
       <a href="#documentacion">Documentación</a>
       <a href="https://www.food4rhino.com/en/app/street-data-insight?lang=es" target="_blank">Food4Rhino</a>
