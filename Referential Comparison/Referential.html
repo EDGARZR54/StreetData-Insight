@@ -86,7 +86,7 @@
   </style>
 </head>
 <body>
-  <!-- Navbar externo -->
+  <!-- Incluir el navbar desde un archivo externo -->
   <div id="navbar-placeholder"></div>
 
   <!-- Título -->
@@ -127,14 +127,6 @@
         width: "100%",
       });
     };
-  
-    fetch('./partials/navbar.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('navbar-placeholder').innerHTML = data;
-      })
-      .catch(error => console.error('Error al cargar el navbar:', error));
-      // Cargar el navbar externo
   </script>
 
   <!-- Créditos y logos al final de la página -->
@@ -147,5 +139,15 @@
       Año de publicación: 2025.
     </p>
   </div>
+
+  <!-- Cargar el navbar externo -->
+  <script>
+    fetch('./partials/navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
+      })
+      .catch(error => console.error('Error al cargar el navbar:', error));
+  </script>
 </body>
 </html>
