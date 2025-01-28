@@ -25,6 +25,40 @@
       font-family: 'Open Sans', sans-serif;
     }
 
+    /* Navbar sticky */
+    .navbar {
+      position: sticky;
+      top: 0;
+      background-color: white; /* Fondo blanco para el navbar */
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+
+    /* Logo en el navbar */
+    .navbar img {
+      height: 80px; /* Reducir el tamaño para móviles */
+      margin-right: 15px;
+    }
+
+    /* Contenedor de botones en la navbar */
+    .navbar-links {
+      display: flex;
+      gap: 10px; /* Reducir el espacio entre botones */
+      flex-wrap: wrap; /* Permitir que los botones se envuelvan en móviles */
+    }
+
+    /* Estilo de los botones */
+    .navbar-links a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      font-size: 14px; /* Reducir el tamaño de la fuente */
+    }
+
     /* Título e imágenes */
     h1 {
       text-align: center;
