@@ -21,18 +21,22 @@
       background-color: black; /* Fondo negro */
       color: white; /* Texto blanco */
       font-family: 'Open Sans', sans-serif;
+      padding-top: 100px; /* Margen superior para evitar solapamiento */
     }
-
+    
+    
     /* Contenedor del navbar */
     #navbar-placeholder {
       height: auto; /* Asegura que el contenedor tenga altura */
       position: relative; /* Asegura que el navbar esté dentro del flujo */
     }
 
-    /* Navbar sticky */
+    /* Navbar */
     .navbar {
-      position: fixed;
-      top: 0;
+      position: fixed;      
+      top: 0;       
+      left: 0;
+      width: 100%; /* Asegura que el navbar ocupe el ancho completo */
       background-color: white; /* Fondo blanco para el navbar */
       display: flex;
       align-items: center;
