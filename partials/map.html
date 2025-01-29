@@ -19,15 +19,16 @@
     /* Contenedor para el SVG */
     #svg-container {
       width: 100%;
-      text-align: center;
-      height: 700px; /* Altura fija */
-      overflow: auto; /* Scroll si el SVG es más grande */
+      height: 100vh; /* Ocupa toda la altura de la ventana */
+      overflow: hidden; /* Evita el scroll interno */
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     
     svg {
-      height: 700px; /* Altura fija */
-      width: auto; /* Mantener la proporción */
-      max-width: 100%; /* Asegurar que no se desborde */
+      max-height: 100%; /* Ajusta el SVG al contenedor */
+      max-width: 100%; /* Ajusta el SVG al contenedor */
     }
     
     /* Burbuja de información */
@@ -44,7 +45,6 @@
   </style>
 </head>
 <body>
-  <h1>Mapa SVG Interactivo</h1>
   <div id="svg-container">Cargando mapa...</div>
   <div id="callout" class="callout"></div>
   
