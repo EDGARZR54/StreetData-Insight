@@ -19,19 +19,21 @@
       }
     }
     
-    .animated-path {
-      fill: none;
-      animation: draw 3s linear infinite;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-    
     /* Contenedor del SVG animado */
     #svg-container {
-      max-width: 100%;
-      height: auto;
-      margin: 0 auto;
-      text-align: center;
+      width: 180px;          /* Ancho fijo */
+      height: auto;          /* Altura proporcional */
+      margin: 0 auto;        /* Centrado */
+      overflow: visible;     /* Asegura que el trazo no se recorte */
+    }
+    
+    /* Animación corregida */
+    .animated-path {
+      fill: none;            /* Elimina el relleno durante la animación */
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      vector-effect: non-scaling-stroke; /* Mantiene el grosor del trazo */
+      animation: draw 3s linear infinite;
     }
     
     
@@ -252,13 +254,20 @@
         
         // Aplicar animación a cada path
         const paths = svgElement.querySelectorAll('path');
+
+        // Dentro de la función loadAndAnimateSVG
         paths.forEach(path => {
           const originalFill = path.getAttribute('fill') || '#000';
-          path.classList.add('animated-path');
+          
+          // Configuración clave para eliminar el offset
+          path.setAttribute('vector-effect', 'non-scaling-stroke');
           path.setAttribute('stroke', originalFill);
-          path.setAttribute('stroke-width', '1.5');
+          path.setAttribute('stroke-width', '1');  /* Ajusta según tu SVG */
+          path.setAttribute('fill', 'none');       /* Anula el fill original */
+          
+          path.classList.add('animated-path');
         });
-
+        
         // Insertar SVG en el contenedor
         const container = document.getElementById('svg-container');
         container.appendChild(svgElement);
