@@ -158,6 +158,13 @@
       height: calc(100vh - 100px); /* Ajustar la altura para el navbar */
       border: none;
     }
+
+    /* Estilos para la imagen */
+    .profile-image {
+      width: 100%;
+      height: 500px;
+      margin-top: 20px; /* Espacio entre el mapa y la imagen */
+    }
   </style>
 </head>
 <body>
@@ -173,6 +180,11 @@
 
     <!-- Iframe que carga el mapa interactivo -->
     <iframe src="../partials/map.html"></iframe>
+
+    <!-- Imagen después del mapa -->
+    <img src="https://cdn.jsdelivr.net/gh/EDGARZR54/StreetData-Insight@613b8a46317686d4fe95213d7fc7e50cfc5d392e/partials/example/Perfil_B.png" 
+         alt="Perfil B" 
+         class="profile-image">
 
     <!-- Créditos y logos al final de la página -->
     <div class="credits">
