@@ -20,11 +20,14 @@
     #svg-container {
       width: 100%;
       text-align: center;
+      height: 700px; /* Altura fija */
+      overflow: auto; /* Scroll si el SVG es más grande */
     }
     
     svg {
-      width: 100%;
-      height: auto;
+      height: 700px; /* Altura fija */
+      width: auto; /* Mantener la proporción */
+      max-width: 100%; /* Asegurar que no se desborde */
     }
     
     /* Burbuja de información */
@@ -36,6 +39,7 @@
       border-radius: 5px;
       box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
       display: none;
+      z-index: 1000; /* Asegurar que esté por encima del SVG */
     }
   </style>
 </head>
