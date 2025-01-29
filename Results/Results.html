@@ -23,7 +23,7 @@
     #svg-container {
       width: 250px;          /* Ancho fijo */
       height: auto;          /* Altura proporcional */
-      margin: 600px 0 0 0; /* Arriba:600px | Derecha:0 | Abajo:0 | Izquierda:0 */
+      margin: 0 0 0 0; /* Arriba:600px | Derecha:0 | Abajo:0 | Izquierda:0 */
       overflow: visible;     /* Asegura que el trazo no se recorte */
     }
     
@@ -262,7 +262,7 @@
           // Configuración clave para eliminar el offset
           path.setAttribute('vector-effect', 'non-scaling-stroke');
           path.setAttribute('stroke', originalFill);
-          path.setAttribute('stroke-width', '3');  /* Ajusta según tu SVG */
+          path.setAttribute('stroke-width', '1');  /* Ajusta según tu SVG */
           path.setAttribute('fill', 'none');       /* Anula el fill original */
           
           path.classList.add('animated-path');
