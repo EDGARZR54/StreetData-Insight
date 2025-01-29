@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SVG Interactivo</title>
+  <style>
+    /* Estilo para las líneas del SVG */
+    .map-line {
+      stroke: black;
+      stroke-width: 2;
+      cursor: pointer;
+      transition: stroke 0.2s;
+    }
+    .map-line:hover {
+      stroke: red;
+    }
+  </style>
+</head>
+<body>
+  <h1>Mapa SVG Interactivo</h1>
+  <div id="svg-container">Cargando mapa...</div>
+
+  <script>
+    const svgUrl = "https://upload.wikimedia.org/wikipedia/commons/e/ea/Mapa_M%C3%A9xico%2C_D._F..svg"; // URL del archivo SVG
+
+    // Función para cargar el SVG
+    async function loadSvg(url) {
+      try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error("No se pudo cargar el SVG.");
+        const svgContent = await response.text();
+
+        // Inserta el SVG en el contenedor
+        document.getElementById("svg-container").innerHTML = svgContent;
+
+        // Agrega interactividad
+        document.querySelectorAll(".map-line").forEach(line => {
+          line.addEventListener("click", function () {
+            alert("Seleccionaste: " + this.id); // Mostrar el ID de la línea seleccionada
+          });
+        });
+      } catch (error) {
+        console.error(error);
+        document.getElementById("svg-container").innerText = "Error al cargar el mapa.";
+      }
+    }
+
+    // Cargar el SVG al iniciar
+    loadSvg(svgUrl);
+  </script>
+</body>
+</html>
