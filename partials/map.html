@@ -62,10 +62,15 @@
         // Inserta el SVG en el contenedor
         document.getElementById("svg-container").innerHTML = svgContent;
 
+        // Agrega la clase map-line a todas las líneas del SVG
+        document.querySelectorAll('line, polyline, path').forEach(element => {
+          element.classList.add('map-line');
+        });
+
         // Agrega interactividad a las líneas
         document.querySelectorAll(".map-line").forEach(line => {
           line.addEventListener("click", function (event) {
-            const text = "Información de la línea: " + this.id;
+            const text = "Información de la línea: " + (this.id || "Sin ID");
             showCallout(event.pageX, event.pageY, text);
           });
         });
