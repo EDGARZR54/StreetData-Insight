@@ -24,7 +24,7 @@
       color: white; /* Texto blanco */
       font-family: 'Open Sans', sans-serif;
     }
-        /* Ajustar el contenedor principal para dar espacio al navbar */
+    /* Ajustar el contenedor principal para dar espacio al navbar */
     #main-content {
       margin-top: 100px; /* Ajuste según el tamaño de tu navbar */
     }
@@ -194,7 +194,7 @@
 
   <!-- Cargar el navbar externo -->
   <script>
-    fetch('/StreetData-Insight/partials/navbar.html')
+    fetch('https://edgarzr54.github.io/StreetData-Insight/partials/navbar.html')
       .then(response => response.text())
       .then(data => {
         document.getElementById('navbar-placeholder').innerHTML = data;
