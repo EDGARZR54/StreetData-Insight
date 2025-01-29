@@ -21,11 +21,14 @@
       background-color: black; /* Fondo negro */
       color: white; /* Texto blanco */
       font-family: 'Open Sans', sans-serif;
+      overflow: hidden; /* Evitar el scroll vertical */
     }
 
     /* Ajustar el contenedor principal para dar espacio al navbar */
     #main-content {
       margin-top: 100px; /* Ajuste según el tamaño de tu navbar */
+      height: calc(100vh - 100px); /* Ajustar la altura para el navbar */
+      overflow-y: auto; /* Permitir scroll solo dentro del contenido principal */
     }
         
     /* Contenedor del navbar */
@@ -155,7 +158,7 @@
     /* Estilos para el iframe */
     iframe {
       width: 100%;
-      height: calc(100vh - 100px); /* Ajustar la altura para el navbar */
+      height: 60vh; /* Reducir la altura del iframe */
       border: none;
     }
 
