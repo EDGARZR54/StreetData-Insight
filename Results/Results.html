@@ -13,6 +13,28 @@
   <link rel="icon" type="image/png" href="https://github.com/EDGARZR54/StreetData-Insight/raw/d378384937443e8cd09db8f0956e21d9ce58907d/Grassshopper%20Components/icon/SDI.png">
 
   <style>
+    @keyframes draw {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+    
+    .animated-path {
+      fill: none;
+      animation: draw 3s linear infinite;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    
+    /* Contenedor del SVG animado */
+    #svg-container {
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto;
+      text-align: center;
+    }
+    
+    
     /* Estilos para eliminar márgenes y padding predeterminados */
     body, html {
       margin: 0;
@@ -178,11 +200,9 @@
   <!-- Incluir el navbar desde un archivo externo -->
   <div id="navbar-placeholder"></div>
   <div id="main-content">
-    <!-- Título -->
+    <!-- Título con SVG animado -->
     <h1>
-      <img src="https://github.com/EDGARZR54/StreetData-Insight/assets/114836515/de67caa2-a486-4f98-bd1e-d09db6b35e37" 
-        alt="Title Image" 
-        style="max-width: 100%; height: auto;">
+      <div id="svg-container"></div>
     </h1>
 
     <!-- Iframe que carga el mapa interactivo -->
@@ -192,7 +212,8 @@
     <div class="image-container">
       <img src="https://cdn.jsdelivr.net/gh/EDGARZR54/StreetData-Insight@613b8a46317686d4fe95213d7fc7e50cfc5d392e/partials/example/Perfil_B.png" alt="Perfil B">
     </div>
-
+   
+    
     <!-- Créditos y logos al final de la página -->
     <div class="credits">
       <img src="https://raw.githubusercontent.com/EDGARZR54/StreetData-Insight/refs/heads/Street-Data-Insight/Imagotype/UNAM_FA_LATE.svg" alt="UNAM Logo">
@@ -204,7 +225,61 @@
       </p>
     </div>
   </div>
+  </div>
 
+  <!-- Cargar el navbar externo -->
+  <script>
+    fetch('https://edgarzr54.github.io/StreetData-Insight/partials/navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
+      })
+      .catch(error => console.error('Error al cargar el navbar:', error));
+  </script>
+
+  <!-- Script para cargar y animar el SVG -->
+  <script>
+    async function loadAndAnimateSVG() {
+      try {
+        // Cargar SVG desde el CDN
+        const response = await fetch('https://cdn.jsdelivr.net/gh/EDGARZR54/StreetData-Insight@0928ceaf92881aa70f483ef1c6be1cad2acf8ed7/Imagotype/SDI_Line.svg');
+        const svgText = await response.text();
+        
+        // Parsear y modificar el SVG
+        const parser = new DOMParser();
+        const svgDoc = parser.parseFromString(svgText, 'image/svg+xml');
+        const svgElement = svgDoc.documentElement;
+        
+        // Aplicar animación a cada path
+        const paths = svgElement.querySelectorAll('path');
+        paths.forEach(path => {
+          const originalFill = path.getAttribute('fill') || '#000';
+          path.classList.add('animated-path');
+          path.setAttribute('stroke', originalFill);
+          path.setAttribute('stroke-width', '1.5');
+        });
+
+        // Insertar SVG en el contenedor
+        const container = document.getElementById('svg-container');
+        container.appendChild(svgElement);
+
+        // Configurar animación
+        setTimeout(() => {
+          container.querySelectorAll('.animated-path').forEach(path => {
+            const length = path.getTotalLength();
+            path.style.strokeDasharray = length;
+            path.style.strokeDashoffset = length;
+          });
+        }, 0);
+
+      } catch (error) {
+        console.error('Error al cargar el SVG:', error);
+      }
+    }
+
+    // Iniciar la animación cuando el documento esté listo
+    document.addEventListener('DOMContentLoaded', loadAndAnimateSVG);
+  </script>
   <!-- Cargar el navbar externo -->
   <script>
     fetch('https://edgarzr54.github.io/StreetData-Insight/partials/navbar.html')
