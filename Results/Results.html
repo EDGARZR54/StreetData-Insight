@@ -23,7 +23,8 @@
     #svg-container {
       width: 250px;          /* Ancho fijo */
       height: auto;          /* Altura proporcional */
-      margin: 0;
+      margin: 0 auto; /* Centrado horizontal */
+      display: block; /* Asegurar comportamiento de bloque */
       overflow: visible;     /* Asegura que el trazo no se recorte */
     }
     
@@ -106,6 +107,9 @@
     h1 {
       text-align: center;
       margin-top: 20px;
+      display: flex; /* Usar flexbox para alineación precisa */
+      justify-content: center; /* Centrar horizontalmente */
+      width: 100%;
     }
 
     /* Texto central */
