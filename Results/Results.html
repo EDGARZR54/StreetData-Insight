@@ -5,15 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Página Principal</title>
   <style>
+    /* Estilos para eliminar márgenes y padding predeterminados */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden; /* Evita el scroll en la página principal */
+    }
+
+    /* Estilos para el iframe */
     iframe {
       width: 100%;
-      height: 500px;
+      height: 100vh; /* Ocupa toda la altura de la ventana */
       border: none;
     }
   </style>
 </head>
 <body>
-  <h1>Mapa SVG desde un Archivo Interactivo</h1>
+  <!-- Iframe que carga el mapa interactivo -->
   <iframe src="../partials/map.html"></iframe>
 </body>
 </html>
