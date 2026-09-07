@@ -945,7 +945,7 @@
           "type": "Vector"
         }
       ],
-      "subcategory": "05 | Streetside"
+      "subcategory": "05 | StreetSide"
     },
     {
       "description": "Converts between geographic coordinates (lat,lon) and local metric system (x,y,z).",
@@ -1263,7 +1263,7 @@
       "inputs": [
         {
           "access": "tree",
-          "description": "Bing Streetside panorama IDs for which metadata will be extracted.",
+          "description": "Bing StreetSide panorama IDs for which metadata will be extracted.",
           "name": "Pano ID",
           "nickname": "PanoID",
           "optional": true,
@@ -2987,14 +2987,14 @@
       "subcategory": "01 | GeoData"
     },
     {
-      "description": "Downloads Bing Streetside panoramas as equirectangular images from a collection of panorama IDs.",
+      "description": "Downloads Bing StreetSide panoramas as equirectangular images from a collection of panorama IDs.",
       "exposure": "secondary",
       "guid": "a3f2c841-7e5d-4b92-8f3a-1d6e9c047b28",
       "icon_base64": "iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANySURBVEhLxVVrSJNRGK7mNitTIRgl8p25z8u64IXU0rLUlKyWXVh2MVy5qSwiZZaieasV6qKUaJVlot0guxoV9KPSCP8FQT8qf4SVkV1Qt+pnPPEe+pZ+LHNE9MDLvp3vnOd53+c953yTJv0PiIylpiXO/ZYwPxKiwJ6KjDXrGNvOGAuW5kQwFqsT2E2RaUFBzzQ2lskLiCR2TuTArQYjrtevgcMSD7s5CfnZ8VyM3nNyfYw7sqILQc4hHvNq7oLG/igiCqy91pyG3pO56DmxDVfsK3EgN5r/7slN5plSEOGqG268dn/nQc8kSO/knB6IjK0zpMRwcikenjKjo2I5DpnicMuRjS0r4rgllDURS6BnGqN3cl4OKj1GH+4ma0YLXD6QDUdRAqpy5sFpS4ez3ID0tCW+C1BpkjVS3D9uwmHrQthNsajLWwBb4XroS+sRUtWJ5MarE7eIGpOTuWAMeW+LCU27krhAbVEmVliL4V/9BMpjg1C3DSO18gzE8889Tebkv2syDcq9P1ezGo3WZJQU5EBbdhR+jgGoW4c4uarlM//vf/odQlM3Tmyb6gTW3VZh4OR3mnJ51oXmHVxAWd0HZfN7+DW8hbr2JWbtewyN8xnUHcMIrL3v3RY56HBRFdcbNqG4YAusFhMXIYuMuzdgdtlVZO2sQpzjNvyvuaDqHOHVzCxyQmSsTs7nFVTF1ux0FOev5fZQlBauh8VswaK6TgR3fMDUy24uoNlWjdBlRs/hk3N5xc/j3y0KrD8jMQqF+XkwWG3QNL1CQPsXTLvo5gKafLt0haTKOSYMKpuapyq5hhmtXz0CQY5HELVhLsaYVr7GZ9AFp4ldCqX9DaafdXGBgJY+6MKjyPd18vk+gywI0UdjcnkfVM0DUDs/cosCj/T8fRXUOPJZYWvlAhRBWSb47e+D+tIQZtpO0vbslq+bECRy1ea9HvIASz1vrBAeBcXBfqi6XNBGx0PHWIl8/bjwRq6q7PJYQs0PWm6E8twn+F94QePQRUSReL+cyysoo8DFq37ZsnkvXyxdA5SAThvmUtS9hPLOCBT3hjHlwTCExBSMe1VIoAynZ2z6lbnARuQHieYEZxihaBvkAkJCCs1rHz3nt6DFoxvL9NHwtluoKr/qHt/ICdwC+pgLrF+6JeVzCHQOdNow38j/BX4A6m9Yiwabd5UAAAAASUVORK5CYII=",
       "inputs": [
         {
           "access": "tree",
-          "description": "Data tree of Bing Streetside panorama IDs to download.",
+          "description": "Data tree of Bing StreetSide panorama IDs to download.",
           "name": "Pano ID",
           "nickname": "PanoID",
           "optional": true,
@@ -3025,7 +3025,7 @@
           "type": "Boolean"
         }
       ],
-      "name": "Streetside | Panorama Handler",
+      "name": "StreetSide | Panorama Handler",
       "nickname": "Panorama Handler",
       "outputs": [
         {
@@ -3047,7 +3047,7 @@
           "type": "Text"
         }
       ],
-      "subcategory": "05 | Streetside"
+      "subcategory": "05 | StreetSide"
     },
     {
       "description": "Calculates clockwise rotation angles from geographic north at converging intersections between a list of curves and a specific point.",
@@ -4685,7 +4685,7 @@
       "subcategory": "07 | Imaging"
     },
     {
-      "description": "Queries Bing Streetside services to retrieve metadata for the nearest available panorama at a specified collection of geographic coordinates.",
+      "description": "Queries Bing StreetSide services to retrieve metadata for the nearest available panorama at a specified collection of geographic coordinates.",
       "exposure": "secondary",
       "guid": "e71b0839-9dbe-4201-8555-7da4863645d5",
       "icon_base64": "iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIjSURBVEhLzZVPaBNBFMbrf8V/AcmhKJklaQmCQkE3uwmxk0JFsAdzE+wlJykIpRQUvOWQtvYgeDCIB6HqQRF1UpAiKhLEuy3qUfAs0m6bouSwefJNM7g7SetEc/CDHzxm3vu+2d0J6en5H8QYs+IxVkkwiwBqrOl9fyXGWCQRY1/7xu/T4fKyBDXWsKf3d6w4Y4WjI+PSeOzNugQ11rCn93esBGPF5FiZTjzwSAl176UZwp7e37G2eoLj/ckbjuMUQSqbu3Oan1sEqezQd9d1SfdqK9u2R/vjfX7wG1jX5snKXaSTFy4Tm3xMsavP6Nj1BTpy84skcvsbGQWk0+m8PThM0ZklOnR33RjjADxqdPZTi4EODHuL7ylZKDVODecJc/bg2ae6X4twioP3anR+4YcEtSI6+4HiV8qNgZFRSmWyP+0zQ69c151wHMf894GAA3M1ml6sS1ArsAfDTCYzoM8ZCyb7H9ZoaqkuQa0wesd/Ekz2PVqj0se6BLWiawF7n6xR6XNdglrRtQDFnuerIboSoASz3fOrIf45gAuKcEEFLvw5mO164YXAGhf+LS6o81vERWOCC9/LiQYBmO186YXAmtrnwq8aB+FUajAYsOP1SohgQDPEMwrRzVXA9rcrIfSAZkhF92uRPqQCtr1bDrFJQFX3axFOoQ8Gr2sQvY8Lyut+bdXuO2xF8/2bmStxQdbGNfSruuFvU7+ycZVp0z//X4OAdaPUog4rAAAAAElFTkSuQmCC",
@@ -4715,7 +4715,7 @@
           "type": "Boolean"
         }
       ],
-      "name": "Streetside | Nearest Panorama Locator",
+      "name": "StreetSide | Nearest Panorama Locator",
       "nickname": "Nearest Panorama Locator",
       "outputs": [
         {
@@ -4737,7 +4737,7 @@
           "type": "Text"
         }
       ],
-      "subcategory": "05 | Streetside"
+      "subcategory": "05 | StreetSide"
     },
     {
       "description": "Calculates clockwise perpendicular heading angles from geographic north at specific points along street curves.",
@@ -5059,7 +5059,12 @@
   ],
   "plugin_metadata": {
     "author": "Edgar Zambrano Rodríguez | @EDGARZR54",
-    "generated_at": "2026-08-10 00:02:11",
+    "author_contact": "EDGARZR54.support+SDI@gmail.com",
+    "description": "An experimental toolset for urban planners and architects, providing custom components to reconstruct, visualize, and process street environments, including geolocation, geospatial orientation, and georeferenced operations on street networks and blocks, while leveraging panoramic and spatial imagery data, computer vision, and the capabilities of Rhino, Grasshopper, and related frameworks.",
+    "generated_at": "2026-09-07 12:08:18",
+    "icon_base64": "iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE4SURBVEhLY2AYBaQAKSmpBCkpqQZkMafWLwpOrV8WOLV++eDU+uU/MRhZPwqQkpL6j2yBU+sXA1IMJskCqMuJNtyv8+n/tAknSLIAFCwYBuHCn/ZKffh/kKvBqfULShCjADQLCLreqvD0f+PYRVdA7P8HuUAYt+EggGYBhoHoGKbeqfWLA9UsWL60/MPWlWk7nFq/PEBWT7EF9nXPwDTMIKfWLwJUsQBksKKe02slfTdQpG9ANogiC2DJziJrLzysQeJUs+D3AYFvIA36wb0duAzCJY4TYNMgJSXlgE0cl3o0I1EBuoZJRUIrpKSkHoA0/j/IBcpI4EheXCewAJs4yRZYGUmAkyIWdSCfYYgTBHS1gCYAasEBqAvJxQXo5sIB1AJK8AcpKSkDdHPhAJokKcEK6GYOfQAAE6bzPPK3OegAAAAASUVORK5CYII=",
+    "id": "65c5b5d7-14b3-4b2e-89be-9848f3e1224f",
+    "license": "free",
     "name": "StreetDataInsight",
     "version": "1.1.1"
   }
